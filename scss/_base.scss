@@ -1,0 +1,134 @@
+//全站設定
+body{
+  font-size: 16px;
+  line-height: 1.5;
+}
+a{
+  text-decoration: none;
+}
+.container{
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 0 $gutter-width/2;
+}
+//flex
+.d-flex{
+  display: flex;
+}
+.f-dc{
+  flex-direction: column;
+}
+.jc-sb{
+  justify-content: space-between;
+}
+.jc-c{
+  justify-content: center;
+  
+}
+//bg-primary、bg-light、bg-dark
+.bg-primary{
+  background: $primary;
+}
+.bg-light{
+  background: $light;
+}
+.bg-dark{
+  background: $dark;
+}
+.bg-white{
+  background: #FFFFFF;
+}
+//font-size、line-height
+@for $i from 1 through 20 {
+  .fz-#{$i}{
+    font-size: $i*4px;
+  }
+}
+@for $i from 1 through 20 {
+  .lh-#{$i}{
+    line-height: $i*3px;
+  }
+}
+// text-color、text-center、text-left
+.text-dark{
+  color: $dark;
+}
+.text-primary{
+  color: $primary;
+}
+.text-white{
+  color: #FFFFFF;
+}
+.text-gray{
+  color: gray;
+}
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-bold{
+  font-weight: bold;
+}
+//border
+.border{
+  border: 1px solid #DEE2E6 ;
+}
+.border-r{
+  border-right: 1px solid gray;
+}
+//box-shadow
+.box-shadow{
+  box-shadow: 0px 2px 6px #00000029;
+}
+//按鈕
+.btn{
+  font-size: 20px;
+  padding: 6px 12px;
+  border: 0;
+}
+.btn-primary{
+  background: $primary;
+  color: #FFFFFF;
+}
+
+//margin、padding
+@for $i from 1 through 25 {
+  .mt-#{$i}{
+    margin-top: $i*4px;
+  }
+  .mb-#{$i}{
+    margin-bottom: $i*4px;
+  }
+  .pt-#{$i}{
+    padding-top: $i*4px;
+  }
+  .pb-#{$i}{
+    padding-bottom: $i*4px;
+  }
+  .p-#{$i}{
+    padding: $i*4px;
+  }
+}
+.px-a{
+  padding-right: auto;
+  padding-left: auto;
+}
+
+//width、height
+@for $i from 1 through 200 {
+  .w-#{$i}{
+    width: $i*4px;
+  }
+}
+@for $i from 1 through 200 {
+  .mw-#{$i}{
+    max-width: $i*4px;
+  }
+}
+@for $i from 1 through 200 {
+  .h-#{$i}{
+    height: $i*4px;
+  }
+}

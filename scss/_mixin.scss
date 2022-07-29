@@ -1,0 +1,19 @@
+@mixin text-hidden {
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+//平板992px以下RWD
+@mixin pad {
+  @media (max-width:992px) {
+    @content;
+  }
+}
+
+//行動裝置767px以下RWD
+@mixin iphone {
+  @media (max-width:767px) {
+    @content;
+  }
+}

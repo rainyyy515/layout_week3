@@ -1,0 +1,169 @@
+//index content
+.banner {
+  background-image: url(../img/home-header.png);
+  height: 767px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  z-index: -1;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    //若沒有height 100% 就無法置中
+    height: 100%;
+  }
+  p {
+    font-size: 36px;
+    color: $dark;
+  }
+  h2 {
+    font-size: 64px;
+    color: $dark;
+    font-weight: bold;
+  }
+}
+@include pad {
+  .banner {
+    background-image: url(../img/home-header-sm.png);
+  }
+  .contentItem {
+    h2 {
+      font-size: 48px;
+    }
+  }
+}
+@include iphone {
+  .banner {
+    height: 396px;
+    position: relative;
+    top: 72px;
+    p {
+      font-size: 16px;
+    }
+    h2 {
+      font-size: 24px;
+      color: $dark;
+      font-weight: bold;
+    }
+  }
+  .contentItem {
+    margin-top: 72px;
+    h2 {
+      font-size: 24px;
+    }
+  }
+}
+
+//contentItem2
+@include pad {
+  .contentItem2 {
+    img {
+      width: 336px;
+    }
+  }
+}
+@include iphone {
+  .contentItem2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2 {
+      font-size: 24px;
+    }
+    img {
+      margin-top: 24px;
+    }
+  }
+}
+
+//contentItem3
+.contentItem3 {
+  background-image: url(../img/index-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 608px;
+  .img{
+    background-image: url(../img/home-section4-1.png);
+    height: 240px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .img2{
+    background-image: url(../img/home-section4-2.png);
+    height: 240px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  li {
+    padding: 0;
+  }
+}
+@include pad{
+  .contentItem3 {
+    background-image: url(../img/index-bg-md.png);
+    height: 960px;
+    li{
+      padding: 0 12px;
+    }
+  }
+}
+@include iphone{
+  .contentItem3{
+    background-image: url(../img/index-bg-sm.png);
+    height: 820px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2{
+      font-size: 24px;
+    }
+    .img{
+      background-image: url(../img/home-section4-1-sm.png);
+      margin-top: 24px;
+    }
+    .img2{
+      background-image: url(../img/home-section4-2-sm.png);
+      margin-top: 24px;
+    }
+  }
+}
+
+//contentItem4
+.contentItem4{
+  img{
+    width: 100%;
+    height: 306px;
+  }
+}
+@include iphone{
+  .contentItem4{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2{
+      font-size: 24px;
+    }
+    img{
+      margin-top: 24px;
+    }
+  }
+}
+
+//contentItem5
+@include pad{
+  .contentItem5{
+    P{
+      margin-top: 24px;
+    }
+  }
+}
+@include iphone{
+  .contentItem5{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2{
+      font-size: 24px;
+    }
+  }
+}

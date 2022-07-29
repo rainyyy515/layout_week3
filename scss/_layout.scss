@@ -1,0 +1,170 @@
+//布局
+
+//header
+.header {
+  background: $primary;
+}
+.title {
+  width: 80px;
+  height: 48px;
+  margin: 12px 0;
+  background-image: url(../img/logo-white.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include text-hidden;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  a {
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+    padding: 25px 32px;
+    &:hover {
+      color: $primary;
+      background: $light;
+    }
+  }
+}
+.showNavbar {
+  display: none;
+}
+@include pad {
+  .container {
+    padding-right: 36px;
+    padding-left: 36px;
+  }
+}
+@include iphone {
+  .header {
+    position: fixed;
+    width: 100%;
+  }
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .navbar {
+    position: absolute;
+    background: $primary;
+    top: 72px;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s;
+    li {
+      width: 100%;
+      text-align: center;
+      a {
+        display: block;
+      }
+    }
+    &.navbar-show {
+      max-height: 500px;
+    }
+  }
+  .showNavbar {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 30px;
+  }
+}
+
+//footer
+.footer {
+  background: $primary;
+  padding-bottom: 32px;
+  padding-top: 48px;
+  .footerNavbar {
+    display: flex;
+    align-items: center;
+    a {
+      display: block;
+      color: #ffffff;
+      padding: 12px 10px;
+      &:hover {
+        background: $light;
+        color: $primary;
+        border-radius: 5px;
+      }
+    }
+    li:not(:first-child) {
+      margin-left: 48px;
+    }
+    @include iphone{
+      display: none;
+    }
+  }
+  .footerSocial {
+    display: flex;
+    img {
+      width: 48px;
+    }
+    li:not(:last-child) {
+      margin-right: 32px;
+    }
+    @include iphone{
+      img{
+        width: 24px;
+      }
+      li:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+  .contact {
+    color: #ffffff;
+    font-size: 36px;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    a {
+      margin-left: 22px;
+      color: #ffffff;
+      &:hover {
+        color: $primary;
+        background: $light;
+        border-radius: 5px;
+      }
+    }
+    @include iphone{
+      font-size: 24px;
+      padding-top: 0;
+      padding-bottom: 24px;
+    }
+  }
+  .copyright{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+    border-top: 1px solid #FFFFFF;
+    p{
+      color: #FFFFFF;
+    }
+    a{
+      font-size: 14px;
+      color: #FFFFFF;
+      &:hover {
+        color: $primary;
+        background: $light;
+        border-radius: 5px;
+      }
+    }
+    li:not(:last-child){
+      margin-right: 48px;
+    }
+    @include iphone{
+      display: block;
+      ul{
+        display: block;
+        li{
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

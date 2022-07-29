@@ -1,0 +1,45 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -($gutter-width)/2;
+  margin-left: -($gutter-width)/2;
+}
+
+@for $i from 1 through $grid-num {
+  .col-#{$i} {
+    max-width: (($i/$grid-num) * 100%);
+    flex: 0 0 (($i/$grid-num) * 100%);
+    padding-right: $gutter-width/2;
+    padding-left: $gutter-width/2;
+  }
+}
+
+@include pad {
+  @for $i from 1 through $grid-num {
+    .col-pad-#{$i} {
+      max-width: (($i/$grid-num) * 100%);
+      flex: 0 0 (($i/$grid-num) * 100%);
+    }
+  }
+}
+@include iphone {
+  @for $i from 1 through $grid-num {
+    .col-iphone-#{$i} {
+      max-width: (($i/$grid-num) * 100%);
+      flex: 0 0 (($i/$grid-num) * 100%);
+    }
+  }
+}
+
+// %col {
+//   max-width: 100%;
+//   flex: 0 0 100%;
+//   padding-right: $gutter-width/2;
+//   padding-left: $gutter-width/2;
+// }
+// 手機優先，不使用格線系統
+// @for $i from 1 through $grid-num {
+//   .col-#{$i}{
+//     @extend %col;
+//   }
+// }
